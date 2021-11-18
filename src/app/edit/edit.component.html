@@ -1,0 +1,38 @@
+<h2>edit</h2>
+<form #formEdit='ngForm' (ngSubmit)="editForm(formEdit)">
+  <input type="hidden" [ngModel]="editItem.id" name="id">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" [ngModel]="editItem.email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" name="password"  [ngModel]="editItem.password" class="form-control" id="password" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="rePassword">Confirm Password</label>
+    <input type="password" name="confirmPassword" [ngModel]="editItem.confirmPassword" class="form-control" id="rePassword" placeholder="Re Password">
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" name="name" [ngModel]="editItem.name" class="form-control" id="name" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="text" name="phone" [ngModel]="editItem.phone" class="form-control" id="phone" placeholder="Surname">
+  </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" name="address" [ngModel]="editItem.address" class="form-control" id="address" placeholder="Address">
+  </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="text" [ngModel]="editItem.age" name="age" class="form-control" id="age" placeholder="Age">
+  </div>
+  <div class="form-group">
+    <label for="sex" class="form-group">Sex</label>
+    <input type="text" [ngModel]="editItem.gender" id="sex" name="gender" class="form-control" placeholder="Sex">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
